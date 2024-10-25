@@ -4,11 +4,11 @@
 IMAGE=sockets-are-cool
 
 run:
-	docker pull eado0/$(IMAGE)
+# docker pull eado0/sockets-are-cool
 	docker run --rm \
 		-v ./project:/autograder/submission \
 		-v ./results:/autograder/results \
-		$(IMAGE) \
+		eado0/$(IMAGE) \
 		/autograder/run_autograder && cat results/results.json
 
 # In case you want to run the autograder manually, use interactive
